@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailsViewController" customModule="Pokemon_Info" customModuleProvider="target">
             <connections>
                 <outlet property="ImgViewAvatar" destination="rNu-9i-NuR" id="6HW-Qt-PaU"/>
+                <outlet property="btnFavourite" destination="TQn-oC-LCd" id="uVN-j9-gkl"/>
                 <outlet property="btnFemale" destination="hgb-uE-6eW" id="shr-nV-nrt"/>
                 <outlet property="btnMale" destination="aYZ-Dp-KR3" id="9Nw-hi-08R"/>
                 <outlet property="lblStatFive" destination="21I-UA-MdF" id="hev-Mq-Tw5"/>
@@ -320,13 +321,27 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TQn-oC-LCd">
+                            <rect key="frame" x="344" y="30" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="bnx-pN-DOl"/>
+                                <constraint firstAttribute="width" constant="30" id="vpJ-fY-rV6"/>
+                            </constraints>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" image="suit.heart" catalog="system"/>
+                            <connections>
+                                <action selector="btnFavouritePressed:" destination="-1" eventType="touchUpInside" id="KvD-t4-s4G"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.98823529409999999" green="0.96862745100000003" blue="0.87450980389999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstItem="3cr-mn-wC9" firstAttribute="top" secondItem="xxA-j9-yMK" secondAttribute="top" constant="30" id="3Qd-fU-Ref"/>
+                        <constraint firstItem="TQn-oC-LCd" firstAttribute="trailing" secondItem="0Z8-i5-LAj" secondAttribute="trailing" id="44J-c1-JfI"/>
                         <constraint firstItem="3cr-mn-wC9" firstAttribute="centerX" secondItem="xxA-j9-yMK" secondAttribute="centerX" id="B6V-kG-Rlx"/>
                         <constraint firstAttribute="bottom" secondItem="0Z8-i5-LAj" secondAttribute="bottom" constant="30" id="GUW-oq-PW0"/>
                         <constraint firstItem="0Z8-i5-LAj" firstAttribute="top" secondItem="3cr-mn-wC9" secondAttribute="bottom" constant="15" id="PTM-Sf-YB6"/>
+                        <constraint firstItem="TQn-oC-LCd" firstAttribute="top" secondItem="rNu-9i-NuR" secondAttribute="top" id="TG3-nA-7Ax"/>
                         <constraint firstItem="0Z8-i5-LAj" firstAttribute="leading" secondItem="xxA-j9-yMK" secondAttribute="leading" constant="40" id="btd-wV-OpZ"/>
                         <constraint firstItem="3cr-mn-wC9" firstAttribute="width" secondItem="xxA-j9-yMK" secondAttribute="width" multiplier="0.55" id="mHz-b6-um6"/>
                         <constraint firstAttribute="trailing" secondItem="0Z8-i5-LAj" secondAttribute="trailing" constant="40" id="nAw-H3-Fnf"/>
@@ -348,6 +363,7 @@
     <resources>
         <image name="iconFemale" width="512" height="512"/>
         <image name="iconMale" width="512" height="512"/>
+        <image name="suit.heart" catalog="system" width="128" height="109"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

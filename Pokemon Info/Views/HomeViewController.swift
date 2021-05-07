@@ -117,7 +117,7 @@ class HomeViewController: UIViewController {
     @IBAction func btnSearchPressed(_ sender: Any) {
      
         if let text = txtSearch.text {
-            
+
             showHud(show: true)
             self.callApi(searchText: text)
         }

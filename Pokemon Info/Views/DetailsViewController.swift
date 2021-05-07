@@ -7,9 +7,9 @@
 
 import Foundation
 import UIKit
+import Alamofire
 
 class DetailsViewController: UIViewController {
-    
     
     //MARK: - Outlets
     
@@ -18,6 +18,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet var viewDetails: UIView!
     @IBOutlet var btnMale: UIButton!
     @IBOutlet var btnFemale: UIButton!
+    @IBOutlet var btnFavourite: UIButton!
     
     @IBOutlet var lblTitleStatOne: UILabel!
     @IBOutlet var lblStatOne: UILabel!
@@ -132,8 +133,45 @@ class DetailsViewController: UIViewController {
         }
     }
     
+    func callPost() {
+        
+        do {
+            
+            let encoder = JSONEncoder()
+            encoder.outputFormatting = .prettyPrinted
+            let data = try encoder.encode(pokemon)
+            let dictionary = try JSONSerialization.jsonObject(with: data) as! [String: Any]
+            
+            AF.request(URL.init(string: "https://webhook.site/baf4233f-a5e9-40f3-a5fb-4bf22562ef7e")!, method: .post, parameters: dictionary, encoding: JSONEncoding.default, headers: nil).responseJSON { (response) in
+                print(response.result)
+                
+                switch response.result {
+                
+                case .success(_):
+                    debugPrint("SUCCESS")
+                    break
+                case .failure(let error):
+                    debugPrint(error)
+                    break
+                }
+            }
+            
+        } catch {
+            
+            debugPrint("ERROR")
+        }
+    }
+    
     
     //MARK: - Actions
+        
+    @IBAction func btnFavouritePressed(_ sender: Any) {
+        
+        btnFavourite.tintColor = UIColor.red
+        btnFavourite.setImage(UIImage(systemName: "suit.heart.fill"), for: .normal)
+        
+        callPost()
+    }
     
     @IBAction func btnMalePressed(_ sender: Any) {
         
