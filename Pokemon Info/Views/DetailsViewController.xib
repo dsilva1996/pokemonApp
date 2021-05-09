@@ -27,6 +27,8 @@
                 <outlet property="lblTitleStatThree" destination="QXR-To-9D0" id="h8Z-Sy-yUo"/>
                 <outlet property="lblTitleStatTwo" destination="zFp-va-lv9" id="BjN-v3-Im1"/>
                 <outlet property="lblWeight" destination="Rmd-U0-jc9" id="wyd-0F-fgm"/>
+                <outlet property="stackViewButtons" destination="gbZ-zi-pMp" id="nQQ-xN-VrM"/>
+                <outlet property="stackViewHeight" destination="SeA-dn-A3f" id="Koy-dT-pPJ"/>
                 <outlet property="view" destination="iN0-l3-epB" id="dRT-yl-nq4"/>
                 <outlet property="viewDetails" destination="0Z8-i5-LAj" id="9cG-ZP-wBR"/>
                 <outlet property="viewImage" destination="3cr-mn-wC9" id="owh-cU-NMn"/>

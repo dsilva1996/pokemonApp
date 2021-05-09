@@ -19,6 +19,8 @@ class DetailsViewController: UIViewController {
     @IBOutlet var btnMale: UIButton!
     @IBOutlet var btnFemale: UIButton!
     @IBOutlet var btnFavourite: UIButton!
+    @IBOutlet var stackViewButtons: UIStackView!
+    @IBOutlet var stackViewHeight: NSLayoutConstraint!
     
     @IBOutlet var lblTitleStatOne: UILabel!
     @IBOutlet var lblStatOne: UILabel!
@@ -97,8 +99,9 @@ class DetailsViewController: UIViewController {
     
     func setupSexButtons() {
         
-        btnMale.isEnabled = pokemon?.sprites?.front_default != nil
-        btnFemale.isEnabled = pokemon?.sprites?.front_female != nil
+        stackViewHeight.constant = pokemon?.sprites?.front_female == nil ? 0 : 40
+        btnMale.isHidden = pokemon?.sprites?.front_female == nil
+        btnFemale.isHidden = pokemon?.sprites?.front_female == nil
     }
     
     func applyDefaultImage() {
