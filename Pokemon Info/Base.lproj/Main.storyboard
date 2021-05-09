@@ -116,7 +116,7 @@ Resultados</string>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.9882352941176471" green="0.96862745098039216" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="RPs-gw-NZh" firstAttribute="trailing" secondItem="Ikr-mC-v2c" secondAttribute="trailing" id="1RP-Y7-WUT"/>
                             <constraint firstItem="2Pj-kG-7m1" firstAttribute="height" secondItem="J1U-hF-1Ky" secondAttribute="height" id="6Ps-jI-bNX"/>

@@ -79,7 +79,7 @@ class DetailsViewController: UIViewController {
         statLabels.append(lblStatFive)
         statTitleLabels.append(lblTitleStatSix)
         statLabels.append(lblStatSIx)
-        btnMale.backgroundColor = UIColor.gray
+        btnMale.backgroundColor = UIColor.darkGray
         btnFemale.backgroundColor = UIColor.white
     }
     
@@ -176,14 +176,14 @@ class DetailsViewController: UIViewController {
     @IBAction func btnMalePressed(_ sender: Any) {
         
         self.applyDefaultImage()
-        btnMale.backgroundColor = UIColor.gray
+        btnMale.backgroundColor = UIColor.darkGray
         btnFemale.backgroundColor = UIColor.white
     }
     
     @IBAction func btnFemalePressed(_ sender: Any) {
         
         self.applyFemaleImage()
-        btnFemale.backgroundColor = UIColor.gray
+        btnFemale.backgroundColor = UIColor.darkGray
         btnMale.backgroundColor = UIColor.white
     }
 }
