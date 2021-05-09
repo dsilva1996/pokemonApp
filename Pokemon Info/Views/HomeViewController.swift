@@ -52,7 +52,6 @@ class HomeViewController: UIViewController {
         
         AF.request(URL(string: "https://pokeapi.co/api/v2/pokemon/" + searchText.lowercased())!, method: .get, parameters: nil, headers: nil).responseJSON { (response) in
             
-            
             if response.response?.statusCode == 404 {
                 
                 self.showHud(show: false)
